@@ -24,7 +24,7 @@
 -->
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
-    <CamcorderProfiles cameraId="0" startOffsetMs="200" >
+    <CamcorderProfiles cameraId="0">
 
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
             <Video codec="h264"
@@ -135,7 +135,7 @@
 
     </CamcorderProfiles>
 
-    <CamcorderProfiles cameraId="1" startOffsetMs="200">
+    <CamcorderProfiles cameraId="1">
 
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
             <Video codec="h264"
