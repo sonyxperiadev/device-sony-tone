@@ -64,26 +64,26 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.msm8952
+    audio.primary.msm8996
 
 # GFX
 PRODUCT_PACKAGES += \
-    copybit.msm8952 \
-    gralloc.msm8952 \
-    hwcomposer.msm8952 \
-    memtrack.msm8952
+    copybit.msm8996 \
+    gralloc.msm8996 \
+    hwcomposer.msm8996 \
+    memtrack.msm8996
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8952
+    gps.msm8996
 
 # CAMERA
 PRODUCT_PACKAGES += \
-    camera.msm8952
+    camera.msm8996
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    keystore.msm8952
+    keystore.msm8996
 
 # FM
 PRODUCT_PACKAGES += \
