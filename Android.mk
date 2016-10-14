@@ -1,4 +1,4 @@
-ifeq ($(filter-out dora,$(TARGET_DEVICE)),)
+ifeq ($(filter-out dora kagura,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
