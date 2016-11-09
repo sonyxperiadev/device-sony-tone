@@ -24,6 +24,7 @@ on fs
 
     restorecon_recursive /persist
     write /sys/kernel/boot_adsp/boot 1
+    write /sys/kernel/boot_slpi/boot 1
 
 on boot
     # Cover mode
