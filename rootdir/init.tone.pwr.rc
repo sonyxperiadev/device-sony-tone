@@ -61,11 +61,6 @@ on boot
     write /proc/sys/kernel/sched_window_stats_policy 5
     write /proc/sys/kernel/sched_ravg_hist_size 5
 
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run 3
-
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
 
@@ -96,11 +91,7 @@ on boot
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 60000
 
     # HMP Task packing settings for 8996
-    write /proc/sys/kernel/sched_small_task 30
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 20
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 20
+    write /proc/sys/kernel/sched_small_wakee_task_load 30
 
     write /proc/sys/kernel/sched_boost 0
 
@@ -113,8 +104,8 @@ on boot
     write /sys/devices/system/cpu/cpu3/online 1
 
     # Disable L2 GDHS on 8996
-    write /sys/module/lpm_levels/system/a53/a53-l2-gdhs/idle_enabled N
-    write /sys/module/lpm_levels/system/a72/a72-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
 
     # Enable Low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
@@ -127,23 +118,12 @@ on boot
     write /proc/sys/kernel/sched_freq_inc_notify 50000
     write /proc/sys/kernel/sched_freq_dec_notify 50000
 
-    #for 8996
-    write /sys/devices/system/cpu/cpu2/core_ctl/min_cpus 2
-    write /sys/devices/system/cpu/cpu2/core_ctl/max_cpus 2
-    write /sys/devices/system/cpu/cpu2/core_ctl/busy_up_thres 68
-    write /sys/devices/system/cpu/cpu2/core_ctl/busy_down_thres 40
-    write /sys/devices/system/cpu/cpu2/core_ctl/offline_delay_ms 100
-    write /sys/devices/system/cpu/cpu2/core_ctl/is_big_cluster 1
-
-    # Enable timer migration to little cluster
-    write /proc/sys/kernel/power_aware_timer_migration 1
-
     # disallow upmigrate for cgroup's tasks
     write /dev/cpuctl/bg_non_interactive/cpu.upmigrate_discourage 1
 
     #enable sched colocation and colocation inheritance
-    write /proc/sys/kernel/sched_grp_upmigrate 130
-    write /proc/sys/kernel/sched_grp_downmigrate 110
+    write /proc/sys/kernel/sched_upmigrate 130
+    write /proc/sys/kernel/sched_downmigrate 110
     write /proc/sys/kernel/sched_enable_thread_grouping 1
 
     chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
@@ -154,10 +134,6 @@ on boot
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1305600"
     write /sys/module/cpu_boost/parameters/input_boost_ms "40"
     write /proc/sys/kernel/sched_upmigrate_min_nice 9
-
-    # set (super) packing parameters
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_freq 1017600
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_freq 0
 
     # Qualcomm are setting these depending on ro.product.name!
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
