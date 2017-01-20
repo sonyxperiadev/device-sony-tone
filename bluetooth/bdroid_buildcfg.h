@@ -30,6 +30,10 @@ static inline const char* getBTDefaultName()
         return "Xperia X Performance";
     }
 
+    if (!strcmp("kagura", device)) {
+        return "Xperia XZ";
+    }
+
     return "Xperia";
 }
 
