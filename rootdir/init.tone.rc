@@ -159,3 +159,7 @@ on property:init.svc.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop per_proxy
+
+on property:sys.boot_completed=1
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-2
