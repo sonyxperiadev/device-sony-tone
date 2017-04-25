@@ -26,6 +26,9 @@ on init
     chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/balance_level
     chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/nr_run_thresholds
     chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/nr_down_run_thresholds
+    # temporarily stop rqbalance hotplugging
+    write /sys/devices/system/cpu/cpuquiet/nr_max_cpus 4
+    write /sys/devices/system/cpu/cpuquiet/nr_min_cpus 4
 
 on charger
     # Disable thermal
