@@ -75,6 +75,7 @@ on boot
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
     # update foreground cpuset now that processors are up
+    write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 0
