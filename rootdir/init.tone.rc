@@ -68,7 +68,7 @@ on boot
 
     # add a cpuset for the camera daemon
     mkdir /dev/cpuset/camera-daemon
-    write /dev/cpuset/camera-daemon/cpus 0
+    write /dev/cpuset/camera-daemon/cpus 0-3
     write /dev/cpuset/camera-daemon/mems 0
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
