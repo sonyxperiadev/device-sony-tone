@@ -76,9 +76,6 @@ BOARD_CUSTOM_BT_CONFIG := $(PLATFORM_COMMON_PATH)/bluetooth/vnd_generic.txt
 # RIL
 TARGET_PER_MGR_ENABLED := true
 
-# Props for hotplugging
-TARGET_SYSTEM_PROP += $(PLATFORM_COMMON_PATH)/system.prop
-
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
 
