@@ -79,4 +79,8 @@ TARGET_PER_MGR_ENABLED := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy
 
+# Display
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_USES_HWC2 := true
+
 include device/sony/common/CommonConfig.mk
