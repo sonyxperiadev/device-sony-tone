@@ -15,6 +15,7 @@
 # Platform path
 PLATFORM_COMMON_PATH := device/sony/tone
 
+PRODUCT_PLATFORM := tone
 TARGET_BOARD_PLATFORM := msm8996
 TARGET_KERNEL_VERSION := 4.4
 
