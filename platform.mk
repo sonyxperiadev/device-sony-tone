@@ -147,7 +147,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1
-
-## 8MP Switch for ES
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.8mp.config=true
