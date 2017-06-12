@@ -34,6 +34,10 @@ static inline const char* getBTDefaultName()
         return "Xperia XZ";
     }
 
+    if (!strcmp("keyaki", device)) {
+        return "Xperia XZs";
+    }
+
     return "Xperia";
 }
 
