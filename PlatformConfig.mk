@@ -88,4 +88,7 @@ TARGET_USES_HWC2 := true
 # Camera
 CAMERA_DAEMON_NOT_PRESENT := true
 
+# FPC version select
+TARGET_FPC_VERSION := N
+
 include device/sony/common/CommonConfig.mk
