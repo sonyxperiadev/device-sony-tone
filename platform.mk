@@ -147,7 +147,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.pug=false \
     ro.qti.sensors.iod=false \
     ro.qfusion_use_report_period=false
-
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=1
