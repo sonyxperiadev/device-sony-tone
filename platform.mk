@@ -48,6 +48,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/rqbalance_config.xml:system/etc/rqbalance_config.xml
 
+# WLAN
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/etc/platform_p2p_supplicant_overlay.conf:system/etc/wifi/platform_p2p_supplicant_overlay.conf \
+    $(SONY_ROOT)/system/etc/platform_wpa_supplicant_overlay.conf:system/etc/wifi/platform_wpa_supplicant_overlay.conf
+
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
