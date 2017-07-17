@@ -134,6 +134,9 @@
 /sys/class/leds/lcd-backlight/max_brightness                         0644 root system
 /sys/class/leds/lcd-backlight/brightness                             0664 system system
 
+# Framebuffer for Dynamic Resolution Switch
+/sys/devices/virtual/graphics/fb0/mode        0664 system graphics
+
 # Thermanager
 /sys/module/msm_performance/parameters/cpu_max_freq   0664 system system
 /sys/module/msm_performance/parameters/cpu_min_freq   0664 system system
