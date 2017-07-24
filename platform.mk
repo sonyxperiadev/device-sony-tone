@@ -17,7 +17,6 @@ PLATFORM_COMMON_PATH := device/sony/tone
 
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 SOMC_PLATFORM := tone
 
@@ -50,8 +49,8 @@ PRODUCT_COPY_FILES += \
 
 # WLAN
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/platform_p2p_supplicant_overlay.conf:system/etc/wifi/platform_p2p_supplicant_overlay.conf \
-    $(SONY_ROOT)/system/etc/platform_wpa_supplicant_overlay.conf:system/etc/wifi/platform_wpa_supplicant_overlay.conf
+    $(SONY_ROOT)/system/etc/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(SONY_ROOT)/system/etc/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
