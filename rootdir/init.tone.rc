@@ -94,7 +94,7 @@ service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc/soc:bcmdhd_wlan/m
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/etc/wifi/platform_wpa_supplicant_overlay.conf \
+    -I/system/etc/wifi/wpa_supplicant_overlay.conf \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
     # We will start as root and wpa_supplicant will switch to user wifi
     # after setting up the capabilities required for WEXT
@@ -107,7 +107,7 @@ service wpa_supplicant /system/bin/wpa_supplicant \
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/etc/wifi/platform_p2p_supplicant_overlay.conf \
+    -I/system/etc/wifi/p2p_supplicant_overlay.conf \
     -O/data/misc/wifi/sockets -pp2p_device=1use_p2p_group_interface=1 \
     -m/data/misc/wifi/p2p_supplicant.conf \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
