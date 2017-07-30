@@ -85,4 +85,7 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_HWC2 := true
 
+# Camera
+CAMERA_DAEMON_NOT_PRESENT := true
+
 include device/sony/common/CommonConfig.mk
