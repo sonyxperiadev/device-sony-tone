@@ -30,8 +30,9 @@ on fs
     write /sys/kernel/boot_slpi/boot 1
 
 on boot
-    # Bluetooth
+    # Wifi
     chown system system /sys/devices/soc/soc:bcmdhd_wlan/macaddr
+    chown wifi wifi /sys/module/bcmdhd/parameters/firmware_path
 
     # Cover mode
     chown system system /sys/devices/virtual/input/clearpad/cover_mode_enabled
