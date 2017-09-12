@@ -149,7 +149,7 @@ on boot
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
     write /sys/class/devfreq/soc:qcom,cpubw/polling_interval 50
     write /sys/class/devfreq/soc:qcom,cpubw/min_freq 1525
-    write /sys/class/devfreq/soc:qcom,cpubw/mbps_zones "1525 5195 11863 13763"
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/mbps_zones "1525 5195 11863 13763"
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms 4
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 34
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length 10
