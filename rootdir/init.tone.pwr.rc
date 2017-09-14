@@ -128,7 +128,7 @@ on boot
     write /proc/sys/kernel/sched_freq_dec_notify 50000
 
     # disallow upmigrate for cgroup's tasks
-    write /dev/cpuctl/bg_non_interactive/cpu.upmigrate_discourage 1
+    write /dev/cpuctl/cpu.upmigrate_discourage 1
 
     #enable sched colocation and colocation inheritance
     write /proc/sys/kernel/sched_upmigrate 130
