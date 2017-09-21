@@ -1,4 +1,4 @@
-ifeq ($(filter-out tone,$(PRODUCT_PLATFORM)),)
+ifeq (tone,$(PRODUCT_PLATFORM))
 
 LOCAL_PATH := $(call my-dir)
 
