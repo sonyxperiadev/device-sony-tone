@@ -85,7 +85,7 @@ on boot
     write /dev/cpuset/system-background/cpus 0-1
 
 # OSS WLAN and BT MAC setup
-service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc/soc:bcmdhd_wlan/macaddr
+service macaddrsetup /system/vendor/bin/macaddrsetup /sys/devices/soc/soc:bcmdhd_wlan/macaddr
     class core
     user system
     group system bluetooth
