@@ -19,10 +19,9 @@ import init.tone.pwr.rc
 
 on init
     write /sys/block/zram0/max_comp_streams 4
-
-on fs
     symlink /dev/block/platform/soc/7464900.sdhci /dev/block/bootdevice
 
+on fs
     mount_all ./fstab.tone
     swapon_all ./fstab.tone
 
