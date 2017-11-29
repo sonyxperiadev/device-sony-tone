@@ -37,10 +37,10 @@
     </performance>
 
     <video_decoding>
-        <cpuquiet min_cpus="1" max_cpus="4"/>
+        <cpuquiet min_cpus="2" max_cpus="4"/>
         <rqbalance balance_level="40"/>
-        <rqbalance down_thresholds="0 120 200 330 4294967295 4294967295 4294967295 4294967295"/>
-        <rqbalance   up_thresholds="180 240 400 4294967295 4294967295 4294967295 4294967295 4294967295"/>
+        <rqbalance down_thresholds="0 70 120 190 4294967295 4294967295 4294967295 4294967295"/>
+        <rqbalance   up_thresholds="100 180 290 4294967295 4294967295 4294967295 4294967295 4294967295"/>
     </video_decoding>
 
     <video_encoding>
