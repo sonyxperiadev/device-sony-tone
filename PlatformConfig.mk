@@ -72,9 +72,6 @@ TARGET_PER_MGR_ENABLED := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
-# Display
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
 # Recovery
 # For split frame buffer in recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
