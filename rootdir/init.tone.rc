@@ -22,7 +22,6 @@ on init
 
 on fs
     mount_all ./fstab.tone
-    swapon_all ./fstab.tone
 
     # /dsp is initially unlabelled so we need to mount
     # it as rw, restore AOSP labels, then remount
@@ -116,3 +115,7 @@ on property:vold.post_fs_data_done=1
 
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all ./fstab.tone
