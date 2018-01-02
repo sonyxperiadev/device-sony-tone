@@ -81,6 +81,9 @@ TARGET_RECOVERY_OVERLAY_ENABLE_DOUBLE_BUFFERING := false
 # FPC version select
 TARGET_FPC_VERSION := N
 
+# Legacy Keymaster
+TARGET_LEGACY_KEYMASTER := true
+
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
 
