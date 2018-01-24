@@ -78,4 +78,7 @@ TARGET_FPC_VERSION := N
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+# Camera
+TARGET_SUPPORT_HAL1 := false
+
 include device/sony/common/CommonConfig.mk
