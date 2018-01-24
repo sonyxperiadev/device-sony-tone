@@ -27,14 +27,5 @@ on boot
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-1
 
-# OSS WLAN and BT MAC setup
-service macaddrsetup /vendor/bin/macaddrsetup /sys/devices/soc/soc:bcmdhd_wlan/macaddr
-    class core
-    user system
-    group system bluetooth
-    disabled
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
-
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
