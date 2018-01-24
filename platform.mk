@@ -144,3 +144,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=6a00000.dwc3 \
     sys.usb.rndis.func.name=rndis_bam
+
+# WiFi MAC address path
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wifi.addr_path=/sys/devices/soc/soc:bcmdhd_wlan/macaddr
