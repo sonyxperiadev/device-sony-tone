@@ -136,21 +136,21 @@
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* max_brightness 0664 system system
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* brightness     0664 system system
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* blink          0664 system system
-/sys/class/leds/lcd-backlight/max_brightness                         0644 root system
-/sys/class/leds/lcd-backlight/brightness                             0664 system system
+/sys/class/leds/lcd-backlight max_brightness                         0644 root system
+/sys/class/leds/lcd-backlight brightness                             0664 system system
 
 # Framebuffer for Dynamic Resolution Switch
-/sys/devices/virtual/graphics/fb0/mode        0664 system graphics
+/sys/devices/virtual/graphics/fb0 mode        0664 system graphics
 
 # Thermanager
-/sys/module/msm_performance/parameters/cpu_max_freq   0664 system system
-/sys/module/msm_performance/parameters/cpu_min_freq   0664 system system
-/sys/module/msm_performance/parameters/max_cpus       0664 system system
+/sys/module/msm_performance/parameters cpu_max_freq   0664 system system
+/sys/module/msm_performance/parameters cpu_min_freq   0664 system system
+/sys/module/msm_performance/parameters max_cpus       0664 system system
 
 # cpuquiet rqbalance permissions
-/sys/devices/system/cpu/cpuquiet/nr_min_cpus                         0660 system system
-/sys/devices/system/cpu/cpuquiet/nr_power_max_cpus                   0660 system system
-/sys/devices/system/cpu/cpuquiet/nr_thermal_max_cpus                 0660 system system
-/sys/devices/system/cpu/cpuquiet/rqbalance/balance_level             0660 system system
-/sys/devices/system/cpu/cpuquiet/rqbalance/nr_run_thresholds         0660 system system
-/sys/devices/system/cpu/cpuquiet/rqbalance/nr_down_run_thresholds    0660 system system
+/sys/devices/system/cpu/cpuquiet nr_min_cpus                         0660 system system
+/sys/devices/system/cpu/cpuquiet nr_power_max_cpus                   0660 system system
+/sys/devices/system/cpu/cpuquiet nr_thermal_max_cpus                 0660 system system
+/sys/devices/system/cpu/cpuquiet rqbalance/balance_level             0660 system system
+/sys/devices/system/cpu/cpuquiet rqbalance/nr_run_thresholds         0660 system system
+/sys/devices/system/cpu/cpuquiet rqbalance/nr_down_run_thresholds    0660 system system
