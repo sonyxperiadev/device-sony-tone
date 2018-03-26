@@ -136,6 +136,7 @@
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* max_brightness 0664 system system
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* brightness     0664 system system
 /sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/led:* blink          0664 system system
+/sys/devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds/rgb rgb_blink        0664 system system
 /sys/class/leds/lcd-backlight max_brightness                         0644 root system
 /sys/class/leds/lcd-backlight brightness                             0664 system system
 
