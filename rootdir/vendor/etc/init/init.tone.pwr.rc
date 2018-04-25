@@ -149,9 +149,5 @@ on boot
 
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
 
-    # Disable L2 GDHS on 8996
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
-
     # Enable Low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
