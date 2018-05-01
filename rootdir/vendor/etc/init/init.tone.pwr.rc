@@ -110,7 +110,7 @@ on property:sys.boot_completed=1
     write /proc/sys/kernel/sched_migration_fixup 1
     write /proc/sys/kernel/sched_downmigrate 45
     write /proc/sys/kernel/sched_upmigrate 45
-    write /proc/sys/kernel/sched_init_task_load 100
+    write /proc/sys/kernel/sched_init_task_load 65
 
     # Enable accounting on CPUs hwmon and bus speed decision algos
     # This allows to scale bus frequencies based on bandwidth calc
