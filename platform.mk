@@ -30,7 +30,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
      frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
-     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.barometer.xml
+     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.barometer.xml \
+     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
+     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -109,8 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sdk.sensors.gestures=false \
     ro.qti.sensors.pedometer=false \
-    ro.qti.sensors.step_detector=false \
-    ro.qti.sensors.step_counter=false \
+    ro.qti.sensors.step_detector=true \
+    ro.qti.sensors.step_counter=true \
     ro.qti.sensors.pam=false \
     ro.qti.sensors.scrn_ortn=false \
     ro.qti.sensors.smd=true \
