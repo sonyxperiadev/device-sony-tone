@@ -91,10 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8996
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    keystore.msm8996
-
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence
