@@ -26,7 +26,7 @@ on boot
     # Set the default IRQ affinity to the primary cluster. When a
     # CPU is isolated/hotplugged, the IRQ affinity is adjusted
     # to one of the CPU from the default IRQ affinity mask.
-    write /proc/irq/default_smp_affinity f
+    write /proc/irq/default_smp_affinity 3
 
 on property:bluetooth.isEnabled=true
     write /sys/class/bluetooth/hci0/idle_timeout 7000
