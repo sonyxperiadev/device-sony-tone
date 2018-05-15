@@ -1,4 +1,4 @@
-ifeq (tone,$(TARGET_BOOTLOADER_BOARD_NAME))
+ifeq (tone,$(PRODUCT_PLATFORM))
 
 LOCAL_PATH := $(call my-dir)
 
