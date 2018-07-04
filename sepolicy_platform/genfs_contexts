@@ -22,6 +22,7 @@ genfscon sysfs /devices/soc/soc:bcmdhd_wlan/macaddr                     u:object
 genfscon sysfs /devices/soc/soc:fpc1145                                 u:object_r:sysfs_fingerprint:s0
 
 genfscon sysfs /devices/soc/900000.qcom,mdss_mdp/caps                   u:object_r:sysfs_mdss_mdp_caps:s0
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/caps          u:object_r:sysfs_mdss_mdp_caps:s0
 genfscon sysfs /module/bcmdhd/parameters/firmware_path                  u:object_r:sysfs_wlan_fwpath:s0
 
 genfscon sysfs /devices/soc/900000.qcom,mdss_mdp/900000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds                       u:object_r:sysfs_leds:s0
