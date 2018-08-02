@@ -22,7 +22,6 @@ genfscon sysfs /devices/soc/soc:bcmdhd_wlan/macaddr                     u:object
 genfscon sysfs /devices/soc/soc:fpc1145                                 u:object_r:sysfs_fingerprint:s0
 
 genfscon sysfs /devices/soc/900000.qcom,mdss_mdp/caps                   u:object_r:sysfs_mdss_mdp_caps:s0
-genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/caps          u:object_r:sysfs_mdss_mdp_caps:s0
 genfscon sysfs /module/bcmdhd/parameters/firmware_path                  u:object_r:sysfs_wlan_fwpath:s0
 
 genfscon sysfs /devices/soc/900000.qcom,mdss_mdp/900000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds                       u:object_r:sysfs_leds:s0
@@ -32,3 +31,36 @@ genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply/bms                            u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply/bms/capacity                   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply/battery/capacity  u:object_r:sysfs_batteryinfo:s0
+
+
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp                        u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_rotator                    u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/b00000.qcom,kgsl-3d0                        u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/9300000.qcom,lpass                          u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/2080000.qcom,mss                            u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi                           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/1c00000.qcom,ssc                            u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/ce0000.qcom,venus                           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/75b6000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+
+genfscon sysfs /devices/platform/soc/a0c000.qcom,cci                             u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/aa4000.qcom,fd                              u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/a1c000.qcom,jpeg                            u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/a24000.qcom,jpeg                            u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/aa0000.qcom,jpeg                            u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/platform/soc/8c0000.qcom,msm-cam                         u:object_r:sysfs_camera:s0
+
+genfscon sysfs /devices/platform/soc/soc:bcm43xx/rfkill/rfkill0/state            u:object_r:sysfs_bluetooth:s0
+genfscon sysfs /devices/platform/soc/soc:bcmdhd_wlan/macaddr                     u:object_r:sysfs_addrsetup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1145                                 u:object_r:sysfs_fingerprint:s0
+
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/caps                   u:object_r:sysfs_mdss_mdp_caps:s0
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/caps          u:object_r:sysfs_mdss_mdp_caps:s0
+
+genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/900000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds                       u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds    u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply/bms                            u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply/bms/capacity                   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply/battery/capacity  u:object_r:sysfs_batteryinfo:s0
