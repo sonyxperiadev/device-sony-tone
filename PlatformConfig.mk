@@ -71,9 +71,6 @@ TARGET_PER_MGR_ENABLED := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
-# FPC version select
-TARGET_FPC_VERSION := N
-
 # Platform witout a vendor partition
 TARGET_COPY_OUT_VENDOR := system/vendor
 
