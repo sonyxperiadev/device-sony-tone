@@ -57,8 +57,10 @@ genfscon sysfs /devices/platform/soc/soc:fpc1145                                
 genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/caps                   u:object_r:sysfs_mdss_mdp_caps:s0
 
 genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp/900000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds                       u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,leds@d000/leds    u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:pmi8994@3:qcom,leds@d000/leds         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:pmi8994@3:qcom,leds@d300/leds         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:pmi8994@3:qcom,leds@d800/leds         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:pmi8994@3:qcom,haptics@c000/leds      u:object_r:sysfs_leds:s0
 
-genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply                        u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply           u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:pmi8994@2:qcom,fg/power_supply                        u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:pmi8994@2:qcom,qpnp-smbcharger/power_supply           u:object_r:sysfs_batteryinfo:s0
