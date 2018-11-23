@@ -69,6 +69,9 @@ TARGET_PER_MGR_ENABLED := true
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
+# Display
+TARGET_USES_GRALLOC1 := true
+
 # Cache partition
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
