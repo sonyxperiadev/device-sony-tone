@@ -68,7 +68,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1785600:90 2073600:95"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 60000
 
     # re-enable thermal
