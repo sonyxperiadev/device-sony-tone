@@ -17,13 +17,13 @@
 
     <batterysave>
         <cpuquiet min_cpus="1" max_cpus="2"/>
-        <rqbalance balance_level="80"/>
+        <rqbalance balance_level="70"/>
         <rqbalance down_thresholds="0 120 200 330 4294967295 4294967295 4294967295 4294967295"/>
         <rqbalance   up_thresholds="180 240 400 4294967295 4294967295 4294967295 4294967295 4294967295"/>
         <rqbalance cluster0_freq_min="0"/>
-        <rqbalance cluster0_freq_max="1324800"/>
+        <rqbalance cluster0_freq_max="1593600"/>
         <rqbalance cluster1_freq_min="0"/>
-        <rqbalance cluster1_freq_max="1824000"/>
+        <rqbalance cluster1_freq_max="2150400"/>
     </batterysave>
 
     <balanced>
@@ -35,9 +35,9 @@
 
     <performance>
         <cpuquiet min_cpus="4" max_cpus="4"/>
-        <rqbalance balance_level="40"/>
-        <rqbalance down_thresholds="0 35 95 160 4294967295 4294967295 4294967295 4294967295"/>
-        <rqbalance   up_thresholds="65 145 300 4294967295 4294967295 4294967295 4294967295 4294967295"/>
+        <rqbalance balance_level="20"/>
+        <rqbalance down_thresholds="0 90 180 270 4294967295 4294967295 4294967295 4294967295"/>
+        <rqbalance   up_thresholds="120 240 400 4294967295 4294967295 4294967295 4294967295 4294967295"/>
     </performance>
 
     <video_decoding>
@@ -53,17 +53,16 @@
         <rqbalance down_thresholds="0 35 95 160 4294967295 4294967295 4294967295 4294967295"/>
         <rqbalance   up_thresholds="65 145 300 4294967295 4294967295 4294967295 4294967295 4294967295"/>
     </video_encoding>
-    
+
     <sustained_perf>
-        <cpuquiet min_cpus="3" max_cpus="3"/>
-        <rqbalance balance_level="40"/>
-        <rqbalance down_thresholds="0 35 95 160 4294967295 4294967295 4294967295 4294967295"/>
-        <rqbalance   up_thresholds="65 145 300 4294967295 4294967295 4294967295 4294967295 4294967295"/>
+        <cpuquiet min_cpus="3" max_cpus="4"/>
+        <rqbalance balance_level="20"/>
+        <rqbalance down_thresholds="0 90 180 270 4294967295 4294967295 4294967295 4294967295"/>
+        <rqbalance   up_thresholds="120 240 400 4294967295 4294967295 4294967295 4294967295 4294967295"/>
         <rqbalance cluster0_freq_min="0"/>
-        <rqbalance cluster0_freq_max="1324800"/>
+        <rqbalance cluster0_freq_max="1593600"/>
         <rqbalance cluster1_freq_min="0"/>
-        <rqbalance cluster1_freq_max="1824000"/>
+        <rqbalance cluster1_freq_max="2150400"/>
     </sustained_perf>
 
 </rqbalance_config>
-

@@ -1,3 +1,4 @@
+
 # Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -46,30 +47,38 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 80
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "10000 1113600:70000 1190400:75000 1228800:80000 1324800:82000 1401600:85000 1478400:90000 1593600:100000"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 99
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1324800
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads 80
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "90 307200:15 422400:20 480000:25 556800:35 652800:40 729600:45 844800:50 960000:55 1036800:60 1113600:65 1190400:70 1228800:75 1324800:80 1401600:85 1478400:90 1593600:99"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 100000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 60000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 80000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack -1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/sampling_down_factor 20000
 
     # enable governor for perf cluster
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load 85
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay "10000 883200:32000 940800:35000 1036800:37000 1113600:40000 1190400:42000 1248000:45000 1324800:50000 1401600:53000 1478400:55000 1555200:60000 1632000:65000 1708800:70000 1785600:75000 1824000:80000 1920000:85000 1996800:90000 2073600:95000 2150400:100000"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load 99
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/align_windows 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1324800
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1632800
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1785600:90 2073600:95"
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "90 307200:15 422200:17 480000:20 556800:22 652800:25 729600:27 806400:30 883200:32 940800:35 1036800:37 1113600:40 1190400:43 1248000:45 1324800:50 1401600:53 1478400:55 1555200:60 1632000:65 1708800:70 1785600:75 1824000:80 1920000:85 1996800:90 2073600:95 2150400:99"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 100000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 60000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/sampling_down_factor 40000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_slack -1
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 80000
 
     # re-enable thermal
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -80,21 +89,24 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu3/online 1
 
     # set cpu_boost parameters
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 1:1324800 2:1113600 3:1113600"
     write /sys/module/cpu_boost/parameters/input_boost_ms "80"
 
     # set sync wakee policy tunable
     write /proc/sys/kernel/sched_prefer_sync_wakee_to_waker 1
 
-    write /proc/sys/kernel/sched_spill_nr_run 3
+    write /proc/sys/kernel/sched_spill_nr_run 2
     write /proc/sys/kernel/sched_freq_inc_notify 400000
     write /proc/sys/kernel/sched_freq_dec_notify 400000
 
     # Setting b.L scheduler parameters
-    write /proc/sys/kernel/sched_boost 0
+    write /proc/sys/kernel/sched_boost 1
     write /proc/sys/kernel/sched_migration_fixup 1
-    write /proc/sys/kernel/sched_downmigrate 45
-    write /proc/sys/kernel/sched_upmigrate 45
+    write /proc/sys/kernel/sched_upmigrate 100
+    write /proc/sys/kernel/sched_downmigrate 85
+    write /proc/sys/kernel/sched_group_upmigrate 100
+    write /proc/sys/kernel/sched_group_downmigrate 85
+    write /proc/sys/kernel/sched_select_prev_cpu_us 0
     write /proc/sys/kernel/sched_init_task_load 65
 
     # Enable accounting on CPUs hwmon and bus speed decision algos
@@ -103,7 +115,7 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/soc:qcom,cpubw/polling_interval 50
     write /sys/class/devfreq/soc:qcom,cpubw/min_freq 1525
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/mbps_zones "3143 5859 11863 13763"
-    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms 2
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 34
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length 10
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/low_power_ceil_mbps 0
