@@ -44,7 +44,6 @@ on property:sys.boot_completed=1
     # enable governor for power cluster
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 80
@@ -58,7 +57,6 @@ on property:sys.boot_completed=1
     # enable governor for perf cluster
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_migration_notif 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load 85
