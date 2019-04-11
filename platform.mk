@@ -149,6 +149,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.als_scale=1 \
     ro.qfusion_use_report_period=false
 
+# Display HACK: Use GPU composition only
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.primary_mixer_stages=1
+
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=6a00000.dwc3 \
