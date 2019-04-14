@@ -152,7 +152,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display HACK: Use GPU composition only
 ## TEMP: Skip loading libsdmextension.so in display hal
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.display.primary_mixer_stages=1
+    vendor.display.primary_mixer_stages=1 \
     vendor.display.skip_extension_intf=1
 
 # USB controller setup
