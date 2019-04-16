@@ -1,4 +1,4 @@
-genfscon sysfs /module/bcmdhd/parameters/firmware_path                           u:object_r:sysfs_wlan_fwpath:s0
+genfscon sysfs /devices/platform/soc/600000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/address     u:object_r:sysfs_mac_address:s0
 
 genfscon sysfs /devices/platform/soc/900000.qcom,mdss_mdp                        u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/900000.qcom,mdss_rotator                    u:object_r:sysfs_msm_subsys:s0
