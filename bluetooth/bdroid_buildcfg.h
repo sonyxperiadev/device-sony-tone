@@ -44,9 +44,30 @@ static inline const char* getBTDefaultName()
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
 #endif // OS_GENERIC
 
+#define BLUETOOTH_QTI_SW TRUE
+
+// Wide-band speech support
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
-#define BLE_VND_INCLUDED TRUE
+
+// Disables read remote device feature
+#define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
+// TODO: zuk has 7 here
+#define MAX_ACL_CONNECTIONS   16
+// TODO: zuk has 16 here
+// TODO: beryllium has 20 here
+#define MAX_L2CAP_CHANNELS    16
+// Google VSC spec support
+#define BLE_VND_INCLUDED   TRUE
+// Skips conn update at conn completion
+#define BTA_BLE_SKIP_CONN_UPD  FALSE
+#define BLE_PERIPHERAL_ADV_NAME FALSE
+// QCOM power management workaround
+#define BT_CLEAN_TURN_ON_DISABLED 1
+
+// Increasing SEPs to 12 from 6 to support SHO/MCast, i.e. two streams per codec
+#define AVDT_NUM_SEPS 12
+
 #undef PROPERTY_VALUE_MAX
 
 #endif
