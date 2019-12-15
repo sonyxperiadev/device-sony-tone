@@ -31,6 +31,7 @@
         <!-- Custom mapping starts here -->
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
+        <device name="SND_DEVICE_OUT_BT_SCO" acdb_id="-1"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="-1"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11" />
