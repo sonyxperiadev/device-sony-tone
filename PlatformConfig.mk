@@ -44,7 +44,6 @@ TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.tone
 
 # Wi-Fi definitions for Broadcom solution but using brcmfmac instead of bcmdhd kernel driver
 WIFI_DRIVER_BUILT           := brcmfmac
-WIFI_BUS                    := PCIE
 BOARD_WLAN_DEVICE           := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
