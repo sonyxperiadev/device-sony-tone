@@ -190,6 +190,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.addr_path=/sys/devices/platform/soc/soc:bcmdhd_wlan/macaddr
 
+# Copy WLAN firmware
+$(call inherit-product-if-exists, vendor/broadcom/wlan/bcmdhd/firmware/bcm4359/device-bcm-vendor.mk)
+
+# Copy NFC firmware
+$(call inherit-product-if-exists, vendor/nxp/nxp-vendor.mk)
+
+# Include board vendor blobs
+$(call inherit-product-if-exists, vendor/sony/tone-common/tone-partial.mk)
+
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
