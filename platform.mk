@@ -111,6 +111,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8996
 
+# Telephony Packages (AOSP)
+PRODUCT_PACKAGES += \
+    InCallUI \
+    Stk
+
+# SAR
+PRODUCT_PACKAGES += \
+    TransPowerSensors
+
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence
