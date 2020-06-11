@@ -18,11 +18,34 @@ PLATFORM_COMMON_PATH := device/sony/tone
 SOMC_PLATFORM := tone
 SOMC_KERNEL_VERSION := 4.9
 
-$(call inherit-product, device/sony/common/common.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
+PRODUCT_PLATFORM_SOD := true
+
+TARGET_BOARD_PLATFORM := msm8996
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
+
+# Wi-Fi definitions for Broadcom solution but using brcmfmac instead of bcmdhd kernel driver
+BOARD_WLAN_DEVICE           := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+WPA_SUPPLICANT_VERSION      := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
+BOARD_HOSTAPD_DRIVER        := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_qcwcn
+
+# BT definitions for Broadcom solution
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_CUSTOM_BT_CONFIG := $(PLATFORM_COMMON_PATH)/bluetooth/vnd_generic.txt
+
+# TAD
+TARGET_USES_TAD_V2 := true
+
+# RIL
+TARGET_PER_MGR_ENABLED := true
+
+# Display
+TARGET_USES_GRALLOC1 := true
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -183,3 +206,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
+$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
