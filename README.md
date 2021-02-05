@@ -1,13 +1,18 @@
+Tone platform
+=============
 Copyright (C) Sony Mobile Communications 2016
-=============================================
+---------------------------------------------
 
-This is the Android device configuration for tone platform.
+Android device configuration for the tone platform (**MSM8996**).
 
-tone devices:
+### Supported devices
 
-    Xperia X Performance ................ Dora
-    Xperia XZ ........................... Kagura
-    Xperia XZs .......................... Keyaki
+| Device | Codename |
+|-|:-:|
+| Xperia X Performance | [dora](https://github.com/sonyxperiadev/device-sony-dora) |
+| Xperia XZ | [kagura](https://github.com/sonyxperiadev/device-sony-kagura) |
+| Xperia XZs | [keyaki](https://github.com/sonyxperiadev/device-sony-keyaki) |
 
-Build instructions
+### Build instructions
+
 https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
